@@ -1,8 +1,8 @@
-## A pair of functions that cache the inverse of a matrix when it is
-## absent and create the inverse of a matrix when it is present
+## A pair of functions that cache the inverse of a matrix when the inverse
+## is present and create the inverse of a matrix when the inverse is absent
 
 
-## Create a special "matrix" object that can cache its inverse
+## makeCacheMatrix creates a special "matrix" object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 	i <<- NULL
@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	setInverse = setInverse)
 }
 
-## Return a matrix that is the inverse of 'x'
+## cacheSolve returns a matrix that is the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
 	i <- x$getInverse()
